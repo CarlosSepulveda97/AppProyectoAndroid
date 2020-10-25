@@ -3,6 +3,7 @@ package com.example.chooseus;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuInflater;
@@ -28,7 +29,8 @@ public class Menu extends AppCompatActivity {
 
 
     public void onInfoClick(MenuItem item) {
-        Toast.makeText(this, "Info", Toast.LENGTH_SHORT).show();//Video clash lol
+        Intent intent = new Intent(this,Info.class);
+        startActivity(intent);
     }
 
     public void onGamesClick(MenuItem item){
