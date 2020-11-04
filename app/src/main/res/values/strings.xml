@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ChooseUs</string>
+    <string name="title_activity_region">Map</string>
 </resources>
