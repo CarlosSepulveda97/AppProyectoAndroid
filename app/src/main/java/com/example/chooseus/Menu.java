@@ -92,11 +92,13 @@ public class Menu extends AppCompatActivity {
     }
 
     public void onGamesClick(MenuItem item){
-        Toast.makeText(this, "Games", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, Games.class);
+        startActivity(intent);
     }
 
     public void onSettingsClick(MenuItem item){
-        Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, Perfil.class);
+        startActivity(intent);
 
     }
 

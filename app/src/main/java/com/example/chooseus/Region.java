@@ -44,7 +44,7 @@ public class Region extends FragmentActivity implements OnMapReadyCallback {
 
 
         spin = (Spinner) findViewById(R.id.spinner);
-        ArrayAdapter<String> regionesAdapt = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, regiones);
+        ArrayAdapter<String> regionesAdapt = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item , regiones);
 
         spin.setAdapter(regionesAdapt);
 
@@ -67,7 +67,9 @@ public class Region extends FragmentActivity implements OnMapReadyCallback {
 
         Log.d("hola","entro");
         mMap = googleMap;
-
+        LatLng sydney = new LatLng(40.990175, -101.863103);
+        mMap.addMarker(new MarkerOptions().position(sydney).title("Norte America"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
         spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -111,18 +113,24 @@ public class Region extends FragmentActivity implements OnMapReadyCallback {
     }
 
 
+    public void onPlayClick(View view){
+        Intent intent = new Intent(this, Region.class);
+        startActivity(intent);
+    }
+
     public void onInfoClick(MenuItem item) {
         Intent intent = new Intent(this,Info.class);
         startActivity(intent);
     }
 
     public void onGamesClick(MenuItem item){
-        Toast.makeText(this, "Games", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, Games.class);
+        startActivity(intent);
     }
 
     public void onSettingsClick(MenuItem item){
-        Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, Perfil.class);
+        startActivity(intent);
 
     }
-
 }

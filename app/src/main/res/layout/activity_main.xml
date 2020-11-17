@@ -21,7 +21,7 @@
         app:srcCompat="@mipmap/go" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/pn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="108dp"
@@ -64,6 +64,6 @@
         android:textColor="@android:color/white"
         android:textColorHint="@android:color/white"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/pn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 import android.widget.VideoView;
 
@@ -29,16 +30,24 @@ public class Info extends AppCompatActivity {
 
 
 
-    public void onInfoClick(MenuItem item) {
+    public void onPlayClick(View view){
+        Intent intent = new Intent(this, Region.class);
+        startActivity(intent);
+    }
 
+    public void onInfoClick(MenuItem item) {
+        Intent intent = new Intent(this,Info.class);
+        startActivity(intent);
     }
 
     public void onGamesClick(MenuItem item){
-        Toast.makeText(this, "Games", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, Games.class);
+        startActivity(intent);
     }
 
     public void onSettingsClick(MenuItem item){
-        Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, Perfil.class);
+        startActivity(intent);
 
     }
 
